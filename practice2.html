@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1>EECS 348 Lab 7 Practice 2</h1>
+	<style>
+		p{
+			border: 50px solid blue;
+			width: 415px;
+			padding: 25px;
+			font-size: 15px;
+		}
+		input{
+			width: 275px;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<p id="theparagraph"> Far above the golden valley
+	Glorious to view,
+	Stands our noble Alma Mater,
+	Towering toward the blue.
+	
+	Lift the chorus ever onward,
+	Crimson and the blue
+	Hail to thee, our Alma Mater
+	Hail to old KU
+	
+	(Slowly x2) Rock Chalk, Jayhawk KU
+	(Yell x3)Rock Chalk, Jayhawk KU!
+	</p>
+	<input type="text" id="colorb" placeholder="Enter an RGB color for the border color">
+	<input type="text" id="colorf" placeholder="Enter an RGB color for the font color">
+	<input type="number" id="bw" placeholder="Enter a border width size">
+	<button onclick="theadjuster()">Change</button>
+	<script>
+		function theadjuster(){
+			const colorb=document.getElementById("colorb").value;
+			const colorf=document.getElementById("colorf").value;
+			const bw=document.getElementById("bw").value;
+			const theparagraph=document.getElementById("theparagraph");
+			theparagraph.style.borderColor= `rgb(${colorb})`;
+			theparagraph.style.color= `rgb(${colorf})`;
+			theparagraph.style.borderWidth= `${bw}px`;
+	}
+	</script>
+</body>
+</html>
+			
+
